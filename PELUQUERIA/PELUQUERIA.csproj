@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0328722D-C5B0-4AEA-A77A-214DF9DD8213}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PELUQUERIA</RootNamespace>
+    <AssemblyName>PELUQUERIA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\cAperturaCaja.cs" />
+    <Compile Include="Clases\cCajaHistorica.cs" />
+    <Compile Include="Clases\cCliente.cs" />
+    <Compile Include="Clases\cConexion.cs" />
+    <Compile Include="Clases\cCorte.cs" />
+    <Compile Include="Clases\cDb.cs" />
+    <Compile Include="Clases\cDetalleCorte.cs" />
+    <Compile Include="Clases\cFunciones.cs" />
+    <Compile Include="Clases\cGasto.cs" />
+    <Compile Include="Clases\cMensaje.cs" />
+    <Compile Include="Clases\cMovimiento.cs" />
+    <Compile Include="Clases\cPeluquero.cs" />
+    <Compile Include="Clases\cProducto.cs" />
+    <Compile Include="Clases\cReporte.cs" />
+    <Compile Include="Clases\cTabla.cs" />
+    <Compile Include="Clases\cTarjeta.cs" />
+    <Compile Include="Clases\cTrabajo.cs" />
+    <Compile Include="Clases\cUsuario.cs" />
+    <Compile Include="Clases\cVenta.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmCliente.Designer.cs">
+      <DependentUpon>FrmAbmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmPeluquero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmPeluquero.Designer.cs">
+      <DependentUpon>FrmAbmPeluquero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmProducto.Designer.cs">
+      <DependentUpon>FrmAbmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmProveedores.Designer.cs">
+      <DependentUpon>FrmAbmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmTarjeta.Designer.cs">
+      <DependentUpon>FrmAbmTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmTrabajo.Designer.cs">
+      <DependentUpon>FrmAbmTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbmUsuario.Designer.cs">
+      <DependentUpon>FrmAbmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizarClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizarClave.Designer.cs">
+      <DependentUpon>FrmActualizarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmApertura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmApertura.Designer.cs">
+      <DependentUpon>FrmApertura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBalance.Designer.cs">
+      <DependentUpon>FrmBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscadorGenerico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscadorGenerico.Designer.cs">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaTrabajo.Designer.cs">
+      <DependentUpon>FrmConsultaTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCopia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCopia.Designer.cs">
+      <DependentUpon>FrmCopia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCorrector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCorrector.Designer.cs">
+      <DependentUpon>FrmCorrector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCorte.Designer.cs">
+      <DependentUpon>FrmCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCumpleanios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCumpleanios.Designer.cs">
+      <DependentUpon>FrmCumpleanios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoCajaDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoCajaDiario.Designer.cs">
+      <DependentUpon>FrmListadoCajaDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoCajaHIstorica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoCajaHIstorica.Designer.cs">
+      <DependentUpon>FrmListadoCajaHIstorica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoDiario.Designer.cs">
+      <DependentUpon>FrmListadoDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoGastos.Designer.cs">
+      <DependentUpon>FrmListadoGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoResumidoxDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoResumidoxDia.Designer.cs">
+      <DependentUpon>FrmListadoResumidoxDia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoTarjetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoTarjetas.Designer.cs">
+      <DependentUpon>FrmListadoTarjetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoVentas.Designer.cs">
+      <DependentUpon>FrmListadoVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarGasto.Designer.cs">
+      <DependentUpon>FrmRegistrarGasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporte.Designer.cs">
+      <DependentUpon>FrmReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteResumido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteResumido.Designer.cs">
+      <DependentUpon>FrmReporteResumido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResumen.Designer.cs">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResumenTrabajos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResumenTrabajos.Designer.cs">
+      <DependentUpon>FrmResumenTrabajos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentaProducto.Designer.cs">
+      <DependentUpon>FrmVentaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PELUQUERIADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PELUQUERIADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbmCliente.resx">
+      <DependentUpon>FrmAbmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmPeluquero.resx">
+      <DependentUpon>FrmAbmPeluquero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmProducto.resx">
+      <DependentUpon>FrmAbmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmProveedores.resx">
+      <DependentUpon>FrmAbmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmTarjeta.resx">
+      <DependentUpon>FrmAbmTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmTrabajo.resx">
+      <DependentUpon>FrmAbmTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbmUsuario.resx">
+      <DependentUpon>FrmAbmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizarClave.resx">
+      <DependentUpon>FrmActualizarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmApertura.resx">
+      <DependentUpon>FrmApertura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBalance.resx">
+      <DependentUpon>FrmBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscadorGenerico.resx">
+      <DependentUpon>FrmBuscadorGenerico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaTrabajo.resx">
+      <DependentUpon>FrmConsultaTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCopia.resx">
+      <DependentUpon>FrmCopia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCorrector.resx">
+      <DependentUpon>FrmCorrector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCorte.resx">
+      <DependentUpon>FrmCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCumpleanios.resx">
+      <DependentUpon>FrmCumpleanios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoCajaDiario.resx">
+      <DependentUpon>FrmListadoCajaDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoCajaHIstorica.resx">
+      <DependentUpon>FrmListadoCajaHIstorica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoDiario.resx">
+      <DependentUpon>FrmListadoDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoGastos.resx">
+      <DependentUpon>FrmListadoGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoResumidoxDia.resx">
+      <DependentUpon>FrmListadoResumidoxDia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoTarjetas.resx">
+      <DependentUpon>FrmListadoTarjetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoVentas.resx">
+      <DependentUpon>FrmListadoVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarGasto.resx">
+      <DependentUpon>FrmRegistrarGasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporte.resx">
+      <DependentUpon>FrmReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteResumido.resx">
+      <DependentUpon>FrmReporteResumido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResumen.resx">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResumenTrabajos.resx">
+      <DependentUpon>FrmResumenTrabajos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentaProducto.resx">
+      <DependentUpon>FrmVentaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.Form1.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmAuto.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmBanco.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmBarrio.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmCiudad.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmCliente.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmEntidad.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmEntidad_prendaria.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAbmMarca.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAlertas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAltaBasica.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAnularVenta.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmAutos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmBorrarTablas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmBuscadorGenerico.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCobroCheque.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCobroCuotas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCobroDocumentos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCobroDocumentosAnteriores.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCobroPrenda.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmConsultaAuto.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmConsultaCLiente.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmConsultaMarca.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmCosto.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDetalleAuto.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDetalleSaldoCobranza.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDetalleSaldoCobranzaGeneral.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDetalleSaldoCuotasAnteriores.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDetalleSaldosEfectivosaPagar.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmDocumentosAnteriores.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmGastos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmGastosGenerales.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmInformeCuentas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmInformeDeuda.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoAlertas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoCheques.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoChequesaPagar.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoCobranza.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoCobranzasGenerales.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoComisiones.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoDocumentosAnteriores.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoEfectivosaPagar.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoGastos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoGastosGenerales.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoInteresesPagados.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoMovimientos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoPrenda.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoPrestamo.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmListadoVentas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmLogin.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmMensaje.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmPagoComision.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmPagoGastos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmPagoInteres.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistarEfectivosaPagar.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarAlarma.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarCobranzaGeneral.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarCobroCobranzasGenerales.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarEfectivo.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarPagoCheque.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarPagoGastos.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmRegistrarPrestamo.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmReporte.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmSaldoCuotas.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmStockAuto.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmTest.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmVenta.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.FrmVistaPrevia.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.Principal.resources" />
+    <EmbeddedResource Include="Iconos\obj\x86\Debug\Concesionaria.Properties.Resources.resources" />
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReporteBalance.rdlc" />
+    <EmbeddedResource Include="ReporteResumido.rdlc" />
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Iconos\obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Iconos\obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Iconos\obj\x86\Debug\GenerateResource.read.1.tlog" />
+    <None Include="Iconos\obj\x86\Debug\GenerateResource.write.1.tlog" />
+    <None Include="Iconos\obj\x86\Debug\RdlCompile.cache" />
+    <None Include="Iconos\obj\x86\Debug\RdlCompile.compiled" />
+    <None Include="Iconos\obj\x86\Debug\ResolveAssemblyReference.cache" />
+    <None Include="PELUQUERIADataSet.xsc">
+      <DependentUpon>PELUQUERIADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PELUQUERIADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PELUQUERIADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PELUQUERIADataSet.xss">
+      <DependentUpon>PELUQUERIADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\add.ico" />
+    <Content Include="Iconos\AUTO.png" />
+    <Content Include="Iconos\AUTO2.png" />
+    <Content Include="Iconos\Borrar.ico" />
+    <Content Include="Iconos\cal.ico" />
+    <Content Include="Iconos\cancel.ico" />
+    <Content Include="Iconos\CAR3.bmp" />
+    <Content Include="Iconos\carpeta.ico" />
+    <Content Include="Iconos\car_add.ico" />
+    <Content Include="Iconos\CASTANO.png" />
+    <Content Include="Iconos\clie.ico" />
+    <Content Include="Iconos\clie2.ico" />
+    <Content Include="Iconos\Compra.ico" />
+    <Content Include="Iconos\Compra2.ico" />
+    <Content Include="Iconos\Compra3.ico" />
+    <Content Include="Iconos\compras.gif" />
+    <Content Include="Iconos\disk.ico" />
+    <Content Include="Iconos\dvd_unmount_32x32-32.ico" />
+    <Content Include="Iconos\email.ico" />
+    <Content Include="Iconos\Folder.ico" />
+    <Content Include="Iconos\FOLDER100.ico" />
+    <Content Include="Iconos\Grilla.ico" />
+    <Content Include="Iconos\ICONO99.gif" />
+    <Content Include="Iconos\kfloppy_32x32-32.ico" />
+    <Content Include="Iconos\Linterna.ico" />
+    <Content Include="Iconos\llave.ico" />
+    <Content Include="Iconos\Mensaje.jpg" />
+    <Content Include="Iconos\money_euro.ico" />
+    <Content Include="Iconos\MOVIMIENTOS.ico" />
+    <Content Include="Iconos\obj\x86\Debug\Concesionaria.csproj.FileListAbsolute.txt" />
+    <Content Include="Iconos\obj\x86\Debug\Concesionaria.exe" />
+    <Content Include="Iconos\obj\x86\Debug\Concesionaria.pdb" />
+    <Content Include="Iconos\obj\x86\Debug\TempPE\CONCESIONARIADataSet.Designer.cs.dll" />
+    <Content Include="Iconos\obj\x86\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Iconos\page_add.ico" />
+    <Content Include="Iconos\print.bmp" />
+    <Content Include="Iconos\print.ico" />
+    <Content Include="Iconos\printer.ico" />
+    <Content Include="Iconos\printer2.gif" />
+    <Content Include="Iconos\Reloj.ico" />
+    <Content Include="Iconos\RelojChico.bmp" />
+    <Content Include="Iconos\statistics2.ico" />
+    <Content Include="Iconos\statistics3.ico" />
+    <Content Include="Iconos\Trabajo.ico" />
+    <Content Include="Iconos\tv.ico" />
+    <Content Include="Iconos\Ventas.ico" />
+    <Content Include="Iconos\zoom.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
